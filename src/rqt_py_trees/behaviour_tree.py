@@ -552,7 +552,7 @@ class RosBehaviourTree(QObject):
         self._refresh_view.emit()
 
     def save_settings(self, plugin_settings, instance_settings):
-        instance_settings.set_value('visibility_level', self.visibility_level)
+        instance_settings.set_value('visibility_level', int(self.visibility_level))
         instance_settings.set_value('auto_fit_graph_check_box_state',
                                     self._widget.auto_fit_graph_check_box.isChecked())
         instance_settings.set_value('highlight_connections_check_box_state',
